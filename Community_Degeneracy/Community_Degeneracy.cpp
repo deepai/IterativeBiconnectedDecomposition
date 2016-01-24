@@ -17,22 +17,20 @@ debugger dbg;
 
 char *input_file_name;
 
+
+
 struct Intersections
 {
-	int count;
-
-	int edge_index;
-
-	int ordering;
-
-	std::vector<int> Head;
-
-	std::list<int>::iterator tracker;
+	int count;  //This member is used to count the number of common_vertices remaining in this edge.
+	int edge_index; //This contains the edge_index of the edge in the original csr_graph
+	int ordering; //Used to store the final Community Degeneracy Ordering.
+	std::vector<int> Head; //This stores the list of edge_indexes (from 0 to edge-1)
+	std::list<int>::iterator tracker; //Iterator tracker contains the position of this edge in the bucket.
 };
 
 struct NodeLists
 {
-	std::list<int> edge_values;
+	std::list<int> edge_values; //bucket entry containing edges
 };
 
 inline unsigned long long merge(unsigned long long upper,unsigned long long lower)
