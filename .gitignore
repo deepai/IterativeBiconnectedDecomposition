@@ -1,0 +1,14 @@
+*.o
+*.mtx
+*.txt
+Helper/helper
+*.sublime-project
+*.sublime-workspace
+bicc/bicc_decomposition
+pruning/Main
+*.json
+backup/
+bicc/.settings
+bicc/.cproject
+bicc/.project
+*fuse*
